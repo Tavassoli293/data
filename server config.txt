@@ -3387,7 +3387,7 @@ python3 /root/trading_bot/scripts/test_connection.py
 INFO:__main__:✅ BingX Connection Successful
 INFO:__main__:💰 USDT Balance: 0.0
 INFO:__main__:📊 AAVE/USDT Price: 179.84
-INFO:httpx:HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/sendMessage "HTTP/1.1 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://api.telegram.org/bot                                    /sendMessage "HTTP/1.1 400 Bad Request"
 ERROR:__main__:❌ Telegram Error: Chat not found
 Copilot said: متوجه شدم که اتصال به BingX موفق
 متوجه شدم که اتصال به BingX موفق بوده اما با تلگرام مشکل داریم. مشکل از chat_id است. بیایید این را مرحله به مرحله حل کنیم:
@@ -3435,7 +3435,7 @@ BINGX_API_KEY=your_bingx_api_key
 BINGX_SECRET=your_bingx_secret
 
 # Telegram Settings (به‌روزرسانی شود)
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=your_new_chat_id
 
 # سایر تنظیمات (قبلی حفظ شود)
@@ -3771,7 +3771,7 @@ python /root/trading_bot/scripts/test_connection.py
 INFO:__main__:✅ BingX Connection Successful
 INFO:__main__:💰 USDT Balance: 0.0
 INFO:__main__:📊 AAVE/USDT Price: 178.13
-INFO:httpx:HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/sendMessage "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.telegram.org/bot                 sendMessage "HTTP/1.1 200 OK"
 INFO:__main__:✅ Telegram Connection Successful
 Copilot said: عالی! هر دو اتصال (BingX و Telegram)
 عالی! هر دو اتصال (BingX و Telegram) با موفقیت برقرار شده است. حالا می‌توانیم سیستم معاملاتی را راه‌اندازی کنیم.
@@ -13003,7 +13003,7 @@ cat /root/trading_bot/logs/monitoring/monitor_err.log
 2025-05-04 20:07:21,324 - monitor - INFO - Monitoring started at 2025-05-04 18:02:33 UTC by Tavassoli293
 2025-05-04 20:07:21,711 - monitor - INFO - Telegram bot started successfully
 (venv) root@vmd166799:~# cat /root/trading_bot/config/.env | grep TELEGRAM
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=73444287
 (venv) root@vmd166799:~# # توقف کامل سرویس
 sudo supervisorctl stop trading_monitor
@@ -13049,7 +13049,7 @@ Python
 self.start_date = datetime(2025, 5, 4, 18, 16, 0)  # تاریخ و زمان دقیق UTC
 تست توکن تلگرام: برای اطمینان از صحت توکن تلگرام، این URL را در مرورگر باز کنید:
 Code
-https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getMe
+https://api.telegram.org/bot                            /getMe
 باید پاسخی مشابه این دریافت کنید:
 
 JSON
@@ -13113,7 +13113,7 @@ nano /root/trading_bot/config/.env
 اطمینان حاصل کنید که این مقادیر درست هستند:
 
 env
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=73444287
 BOT_USERNAME=@TakeyTakeyBot
 BOT_NAME=TurboV2Bot
@@ -13777,7 +13777,7 @@ class TradingMonitor:
         self.logger = logging.getLogger('monitor')
         
         self.config = config
-        self.telegram_token = "7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY"
+        self.telegram_token = ""
         self.username = "Tavassoli293"
         self.start_date = datetime(2025, 5, 4, 19, 59, 28)
         
@@ -13837,7 +13837,7 @@ class TradingMonitor:
 
 async def main():
     config = {
-        'telegram_token': "7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY",
+        'telegram_token': "",
         'allowed_users': ['Tavassoli293']
     }
     
@@ -13951,7 +13951,7 @@ class TradingMonitor:
         self.logger = logging.getLogger('monitor')
         
         self.config = config
-        self.telegram_token = "7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY"
+        self.telegram_token = ""
         self.username = "Tavassoli293"
         self.start_date = datetime(2025, 5, 4, 20, 12, 45)
         
@@ -14010,7 +14010,7 @@ class TradingMonitor:
 
 async def main():
     config = {
-        'telegram_token': "7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY",
+        'telegram_token': "",
         'allowed_users': ['Tavassoli293']
     }
     
@@ -14107,7 +14107,7 @@ class TradingMonitor:
         self.logger = logging.getLogger('monitor')
         
         self.config = config
-        self.telegram_token = "7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY"
+        self.telegram_token = ""
         self.username = "Tavassoli293"
         self.start_date = datetime(2025, 5, 4, 20, 15, 32)
         
@@ -14181,7 +14181,7 @@ class TradingMonitor:
 
 def main():
     config = {
-        'telegram_token': "7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY",
+        'telegram_token': "",
         'allowed_users': ['Tavassoli293']
     }
     
@@ -14709,7 +14709,7 @@ class TradingMonitor:
         self.logger = logging.getLogger('monitor')
         
         self.config = config
-        self.telegram_token = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+        self.telegram_token = ''
         self.username = 'Tavassoli293'
         self.start_date = datetime(2025, 5, 4, 20, 21, 59)
         
@@ -14782,7 +14782,7 @@ class TradingMonitor:
 
 def main():
     config = {
-        'telegram_token': '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY',
+        'telegram_token': '',
         'allowed_users': ['Tavassoli293']
     }
     
@@ -14998,7 +14998,7 @@ class TradingMonitor:
         self.logger = logging.getLogger('monitor')
         
         self.config = config
-        self.telegram_token = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+        self.telegram_token = ''
         self.username = 'Tavassoli293'
         self.start_date = datetime(2025, 5, 4, 20, 33, 7)
         
@@ -15070,7 +15070,7 @@ class TradingMonitor:
 
 def main():
     config = {
-        'telegram_token': '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY',
+        'telegram_token': '',
         'allowed_users': ['Tavassoli293']
     }
     
@@ -15182,7 +15182,7 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 22:35:02,644 - httpcore.http11 - DEBUG - send_request_body.complete
 2025-05-04 22:35:02,644 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 22:35:02,666 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:35:02 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'25'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 22:35:02,801 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/setMyCommands "HTTP/1.1 200 OK"
+2025-05-04 22:35:02,801 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/setMyCommands "HTTP/1.1 200 OK"
 2025-05-04 22:35:02,801 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 22:35:02,802 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 22:35:02,802 - httpcore.http11 - DEBUG - response_closed.started
@@ -15198,7 +15198,7 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 22:35:02,813 - httpcore.http11 - DEBUG - send_request_body.complete
 2025-05-04 22:35:02,813 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 22:35:02,891 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:35:02 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'253'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 22:35:02,897 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getMe "HTTP/1.1 200 OK"
+2025-05-04 22:35:02,897 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getMe "HTTP/1.1 200 OK"
 2025-05-04 22:35:02,898 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 22:35:02,898 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 22:35:02,898 - httpcore.http11 - DEBUG - response_closed.started
@@ -15257,9 +15257,9 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 22:35:24,376 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 22:35:24,395 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:35:24 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'25'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
 2025-05-04 22:35:24,395 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:35:24 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'25'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 22:35:24,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/setMyCommands "HTTP/1.1 200 OK"
+2025-05-04 22:35:24,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/setMyCommands "HTTP/1.1 200 OK"
 2025-05-04 22:35:24,400 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-04 22:35:24,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/setMyCommands "HTTP/1.1 200 OK"
+2025-05-04 22:35:24,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/setMyCommands "HTTP/1.1 200 OK"
 2025-05-04 22:35:24,400 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 22:35:24,401 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 22:35:24,401 - httpcore.http11 - DEBUG - receive_response_body.complete
@@ -15288,10 +15288,10 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 22:35:24,408 - httpcore.http11 - DEBUG - send_request_body.complete
 2025-05-04 22:35:24,408 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 22:35:24,420 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:35:24 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'253'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 22:35:24,420 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getMe "HTTP/1.1 200 OK"
+2025-05-04 22:35:24,420 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getMe "HTTP/1.1 200 OK"
 2025-05-04 22:35:24,420 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:35:24 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'253'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
 2025-05-04 22:35:24,421 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-05-04 22:35:24,420 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getMe "HTTP/1.1 200 OK"
+2025-05-04 22:35:24,420 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getMe "HTTP/1.1 200 OK"
 2025-05-04 22:35:24,421 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 22:35:24,421 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 22:35:24,421 - httpcore.http11 - DEBUG - receive_response_body.complete
@@ -15341,7 +15341,7 @@ class TradingMonitor:
         self.logger = logging.getLogger('monitor')
         
         self.config = config
-        self.telegram_token = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+        self.telegram_token = ''
         self.username = 'Tavassoli293'
         self.start_date = datetime(2025, 5, 4, 20, 37, 15)
         self.application = None
@@ -15401,7 +15401,7 @@ class TradingMonitor:
 
 async def main():
     config = {
-        'telegram_token': '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY',
+        'telegram_token': '',
         'allowed_users': ['Tavassoli293']
     }
     
@@ -15505,7 +15505,7 @@ sys:1: RuntimeWarning: coroutine 'Application.initialize' was never awaited
 2025-05-04 22:40:03,006 - httpcore.http11 - DEBUG - send_request_body.complete
 2025-05-04 22:40:03,006 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 22:40:03,071 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:40:03 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'25'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 22:40:03,073 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/setMyCommands "HTTP/1.1 200 OK"
+2025-05-04 22:40:03,073 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/setMyCommands "HTTP/1.1 200 OK"
 2025-05-04 22:40:03,075 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 22:40:03,075 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 22:40:03,076 - httpcore.http11 - DEBUG - response_closed.started
@@ -15521,7 +15521,7 @@ sys:1: RuntimeWarning: coroutine 'Application.initialize' was never awaited
 2025-05-04 22:40:03,081 - httpcore.http11 - DEBUG - send_request_body.complete
 2025-05-04 22:40:03,081 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 22:40:03,092 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:40:03 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'253'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 22:40:03,093 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getMe "HTTP/1.1 200 OK"
+2025-05-04 22:40:03,093 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getMe "HTTP/1.1 200 OK"
 2025-05-04 22:40:03,093 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 22:40:03,094 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 22:40:03,094 - httpcore.http11 - DEBUG - response_closed.started
@@ -15570,7 +15570,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavassoli293']
 START_DATE = datetime(2025, 5, 4, 20, 40, 35)
 
@@ -15777,7 +15777,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavassoli293']
 START_DATE = datetime(2025, 5, 4, 20, 44, 53)
 
@@ -16022,7 +16022,7 @@ sys:1: RuntimeWarning: coroutine 'Application.initialize' was never awaited
 2025-05-04 22:50:02,514 - httpcore.http11 - DEBUG - send_request_body.complete
 2025-05-04 22:50:02,514 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 22:50:02,532 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 20:50:02 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'253'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 22:50:02,578 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getMe "HTTP/1.1 200 OK"
+2025-05-04 22:50:02,578 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getMe "HTTP/1.1 200 OK"
 2025-05-04 22:50:02,591 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 22:50:02,592 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 22:50:02,608 - httpcore.http11 - DEBUG - response_closed.started
@@ -16064,7 +16064,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavassoli293']
 START_DATE = datetime(2025, 5, 4, 20, 50, 33)
 
@@ -16250,7 +16250,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavassoli293']
 START_DATE = datetime(2025, 5, 4, 21, 3, 27)
 
@@ -16432,7 +16432,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavassoli293']  # اطمینان از درستی نام کاربری
 START_DATE = datetime(2025, 5, 4, 21, 9, 12)
 
@@ -16626,7 +16626,7 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 
 ==> /root/trading_bot/logs/monitoring/monitor.log <==
 2025-05-04 23:13:09,813 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:09 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:09,816 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:09,816 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:13:09,817 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:09,817 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:09,818 - httpcore.http11 - DEBUG - response_closed.started
@@ -16636,7 +16636,7 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 23:13:09,819 - telegram.ext.ExtBot - DEBUG - Exiting: get_updates
 2025-05-04 23:13:09,819 - telegram.ext.ExtBot - DEBUG - Entering: get_updates
 2025-05-04 23:13:09,813 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:09 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:09,816 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:09,816 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:13:09,817 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:09,817 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:09,818 - httpcore.http11 - DEBUG - response_closed.started
@@ -16657,7 +16657,7 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 23:13:09,829 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 23:13:12,176 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'351'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
 2025-05-04 23:13:12,176 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'351'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:12,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:12,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:13:12,178 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:12,178 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:12,179 - httpcore.http11 - DEBUG - response_closed.started
@@ -16666,7 +16666,7 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 23:13:12,181 - telegram.ext.ExtBot - DEBUG - (Update(message=Message(channel_chat_created=False, chat=Chat(first_name='Tavass', id=73444287, type=<ChatType.PRIVATE>, username='Tavass'), date=datetime.datetime(2025, 5, 4, 21, 13, 12, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=6, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='Tavass', id=73444287, is_bot=False, language_code='en', username='Tavass'), group_chat_created=False, message_id=105, supergroup_chat_created=False, text='/start'), update_id=890086256),)
 2025-05-04 23:13:12,182 - telegram.ext.ExtBot - DEBUG - Exiting: get_updates
 2025-05-04 23:13:12,182 - telegram.ext.ExtBot - DEBUG - Entering: get_updates
-2025-05-04 23:13:12,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:12,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:13:12,178 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:12,178 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:12,179 - httpcore.http11 - DEBUG - response_closed.started
@@ -16718,13 +16718,13 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 23:13:12,280 - httpcore.http11 - DEBUG - send_request_body.complete
 2025-05-04 23:13:12,280 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 23:13:12,318 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'267'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:12,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/sendMessage "HTTP/1.1 200 OK"
+2025-05-04 23:13:12,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/sendMessage "HTTP/1.1 200 OK"
 2025-05-04 23:13:12,319 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:12,320 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:12,320 - httpcore.http11 - DEBUG - response_closed.started
 2025-05-04 23:13:12,320 - httpcore.http11 - DEBUG - response_closed.complete
 2025-05-04 23:13:12,318 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'267'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:12,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/sendMessage "HTTP/1.1 200 OK"
+2025-05-04 23:13:12,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/sendMessage "HTTP/1.1 200 OK"
 2025-05-04 23:13:12,319 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:12,320 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:12,320 - httpcore.http11 - DEBUG - response_closed.started
@@ -16735,8 +16735,8 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 23:13:12,330 - telegram.ext.ExtBot - DEBUG - Exiting: send_message
 2025-05-04 23:13:22,223 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:22 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
 2025-05-04 23:13:22,223 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:22 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:22,243 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
-2025-05-04 23:13:22,243 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:22,243 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:22,243 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:13:22,244 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:22,244 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:22,244 - httpcore.http11 - DEBUG - receive_response_body.complete
@@ -16764,12 +16764,12 @@ root@vmd166799:~# tail -f /root/trading_bot/logs/monitoring/monitor.log /root/tr
 2025-05-04 23:13:22,400 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 23:13:22,400 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
 2025-05-04 23:13:32,391 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:32 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:32,392 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:32,392 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:13:32,392 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:32,393 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:32,393 - httpcore.http11 - DEBUG - response_closed.started
 2025-05-04 23:13:32,391 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:13:32 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:13:32,392 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:13:32,392 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:13:32,392 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:13:32,393 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:13:32,393 - httpcore.http11 - DEBUG - response_closed.started
@@ -16816,7 +16816,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavass']  # تغییر به نام کاربری صحیح
 START_DATE = datetime(2025, 5, 4, 21, 15, 45)
 
@@ -17006,7 +17006,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavass', 'Tavassoli293']  # هر دو نام کاربری مجاز
 START_DATE = datetime(2025, 5, 4, 21, 17, 32)
 
@@ -17196,7 +17196,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavass', 'Tavassoli293']
 START_DATE = datetime(2025, 5, 4, 21, 21, 51)
 
@@ -17518,7 +17518,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavassoli293']  # فقط نام کاربری اصلی
 START_DATE = datetime(2025, 5, 4, 21, 30, 45)
 
@@ -17754,7 +17754,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USERS = ['Tavassoli293']  # دقیقاً همین نام کاربری
 START_DATE = datetime(2025, 5, 4, 21, 32, 8)
 
@@ -18025,7 +18025,7 @@ logging.basicConfig(
 logger = logging.getLogger('monitor')
 
 # تنظیمات کلی
-TELEGRAM_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TELEGRAM_TOKEN = ''
 ALLOWED_USER = "Tavassoli293"  # فقط یک کاربر مجاز
 START_DATE = datetime(2025, 5, 4, 21, 35, 7)
 
@@ -18273,7 +18273,7 @@ root@vmd166799:~#: command not found
 
 ==> /root/trading_bot/logs/monitoring/monitor.log <==
 2025-05-04 23:36:48,463 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Sun, 04 May 2025 21:36:48 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
-2025-05-04 23:36:48,464 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY/getUpdates "HTTP/1.1 200 OK"
+2025-05-04 23:36:48,464 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot/getUpdates "HTTP/1.1 200 OK"
 2025-05-04 23:36:48,465 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
 2025-05-04 23:36:48,466 - httpcore.http11 - DEBUG - receive_response_body.complete
 2025-05-04 23:36:48,466 - httpcore.http11 - DEBUG - response_closed.started
@@ -18329,7 +18329,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # تنظیمات اصلی
-TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TOKEN = ''
 ADMIN_USERNAME = 'Tavassoli293'
 
 # کیبورد اصلی
@@ -18514,7 +18514,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # تنظیمات اصلی
-TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TOKEN = ''
 ADMIN_USERNAME = 'Tavass'  # تغییر به نام کاربری صحیح
 
 # کیبورد اصلی
@@ -18682,7 +18682,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # تنظیمات اصلی
-TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+TOKEN = ''
 ADMIN_USERNAME = 'Tavass'
 START_TIME = datetime(2025, 5, 4, 21, 43, 56)
 
