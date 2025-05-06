@@ -32,7 +32,7 @@ LEVERAGE = 20
 SYMBOL = 'AAVE-USDT'  # Replace with your trading pair
 INTERVAL = '1M'  # 1-minute interval (adjust as needed)
 
-# Generate signature for API requests
+# Generate signature for  requests
 def generate_signature(secret_key, params):
     query_string = '&'.join([f"{key}={value}" for key, value in sorted(params.items())])
     signature = hmac.new(secret_key.encode(), query_string.encode(), hashlib.sha256).hexdigest()
@@ -3785,7 +3785,7 @@ env
 # API Keys (حفظ شود)
 BINGX_API_KEY=your_current_key
 BINGX_SECRET=your_current_secret
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=your_confirmed_chat_id
 
 # Trading Parameters
@@ -5675,7 +5675,7 @@ env
 # API Keys
 BINGX_API_KEY=your_api_key_here
 BINGX_SECRET=your_secret_here
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=your_chat_id_here
 
 # Trading Parameters
@@ -6206,7 +6206,7 @@ env
 # API Keys
 BINGX_API_KEY=your_api_key_here
 BINGX_SECRET=your_secret_here
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=your_chat_id_here
 
 # Trading Parameters
@@ -6364,7 +6364,7 @@ env
 # API Keys & Authentication
 BINGX_API_KEY=your_api_key_here
 BINGX_SECRET=your_secret_here
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=Tavassoli293
 
 # Environment Settings
@@ -6531,7 +6531,7 @@ env
 # API Keys & Authentication
 BINGX_API_KEY=your_api_key_from_bingx    # API Key جدید را اینجا قرار دهید
 BINGX_SECRET=your_secret_from_bingx      # Secret جدید را اینجا قرار دهید
-TELEGRAM_TOKEN=7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY
+TELEGRAM_TOKEN=
 TELEGRAM_CHAT_ID=Tavassoli293
 
 # سایر تنظیمات مثل قبل ...
@@ -18987,8 +18987,8 @@ BINANCE_API_KEY = "YOUR_API_KEY"
 BINANCE_API_SECRET = "YOUR_API_SECRET"
 
 # تنظیمات ربات
-BOT_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
-ADMIN_USERNAME = 'Tavass'
+BOT_TOKEN = 
+ADMIN_USERNAME = 
 
 # تنظیمات معاملات
 TRADE_SETTINGS = {
@@ -19314,12 +19314,12 @@ bash
 # 1. ابتدا کلیدهای API را ذخیره می‌کنیم
 cat > /root/trading_bot/scripts/config.py << 'EOL'
 # Binance API Keys
-BINANCE_API_KEY = "18lH4fDhiQtG2QA5iN0qvpnsj7BQfltaEUiRn7aiMXzw7zRQVPB37huxGUSlrpgd"
-BINANCE_API_SECRET = "YVj9CigrUflOXbLXqZW5StQQu38kc8bXXPmgWQFUd0J9zUdzRGGNZhZGXaaZoD9R"
+BINANCE_API_KEY = 
+BINANCE_API_SECRET = 
 
 # Bot Settings
-BOT_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
-ADMIN_USERNAME = 'Tavass'
+BOT_TOKEN = 
+ADMIN_USERNAME = 
 EOL
 
 # 2. فایل کمکی برای تابع‌های بایننس
@@ -19505,11 +19505,11 @@ bash
 # 1. ابتدا کلیدهای API را ذخیره می‌کنیم (همان کلیدهای قبلی شما)
 cat > /root/trading_bot/scripts/config.py << 'EOL'
 # Binance API Keys
-BINANCE_API_KEY = "18lH4fDhiQtG2QA5iN0qvpnsj7BQfltaEUiRn7aiMXzw7zRQVPB37huxGUSlrpgd"
-BINANCE_API_SECRET = "YVj9CigrUflOXbLXqZW5StQQu38kc8bXXPmgWQFUd0J9zUdzRGGNZhZGXaaZoD9R"
+BINANCE_API_KEY = 
+BINANCE_API_SECRET =
 
 # Bot Settings
-BOT_TOKEN = '7428056495:AAGTvBzd0_jbjtsV1YRqFStPDq9LnhZb1nY'
+BOT_TOKEN = 
 ADMIN_USERNAME = 'Tavassoli293'  # نام کاربری صحیح شما
 START_TIME = '2025-05-04 22:02:43'
 EOL
